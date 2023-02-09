@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!--1.配置user对象 有参构造注入属性-->
+  <bean id="user" class="org.example.model.User">
+    <constructor-arg name="name" value="周李鑫"></constructor-arg>
+    <constructor-arg name="age" value="18"></constructor-arg>
+  </bean>
+  <!--1.配置book对象 set方法注入属性-->
+  <bean id="book" class="org.example.model.Book">
+    <!--2.使用property完成属性注入-->
+    <property name="author" value="孙武"></property>
+    <property name="name" value="孙子兵法"></property>
+  </bean>
+</beans>
