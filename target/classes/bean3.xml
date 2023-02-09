@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--内部bean-->
+    <bean id="emp" class="org.example.model.Emp">
+        <!--设置两个普通属性-->
+        <property name="name" value="周李鑫"></property>
+        <property name="sex" value="男"></property>
+        <!--设置对象属性-->
+        <property name="dept">
+            <bean id="dept" class="org.example.model.Dept">
+                <property name="name" value="研发部"></property>
+            </bean>
+        </property>
+    </bean>
+    <!--级联赋值-->
+    <bean id="emp" class="org.example.model.Emp">
+        <!--设置两个普通属性-->
+        <property name="name" value="周李鑫"></property>
+        <property name="sex" value="男"></property>
+        <!--级联赋值-->
+        <property name="dept" ref="dept2">
+        </property>
+    </bean>
+    <bean id="dept2" class="org.example.model.Dept">
+        <property name="name" value="研发部"></property>
+    </bean>
+</beans>

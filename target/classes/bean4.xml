@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--集合类型属性注入-->
+    <bean id="stu" class="org.example.collectiontype.Stu">
+        <!--数组类型属性注入-->
+        <property name="names">
+            <array>
+                <value>"周李鑫"</value>
+                <value>"阿甩甩"</value>
+            </array>
+        </property>
+        <!--List类型属性注入-->
+        <property name="list">
+            <array>
+                <value>"阿甩甩List"</value>
+                <value>"周李鑫List"</value>
+            </array>
+        </property>
+        <!--Map类型属性注入-->
+        <property name="maps">
+            <map>
+                <entry key="1" value="阿甩甩"></entry>
+                <entry key="2" value="周李鑫"></entry>
+            </map>
+        </property>
+        <!--Set类型属性注入-->
+        <property name="sets">
+            <set>
+                <value>"阿甩甩Set"</value>
+                <value>"周李鑫Set"</value>
+            </set>
+        </property>
+    </bean>
+</beans>
