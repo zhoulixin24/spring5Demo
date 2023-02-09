@@ -6,6 +6,12 @@ package org.example.model;
 public class Book {
     private String name;
     private String author;
+    private String address;
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 
     public void setAuthor(String author) {
         this.author = author;

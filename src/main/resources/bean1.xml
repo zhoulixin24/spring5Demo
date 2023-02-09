@@ -12,5 +12,11 @@
     <!--2.使用property完成属性注入-->
     <property name="author" value="孙武"></property>
     <property name="name" value="孙子兵法"></property>
+    <!--属性值特殊符号值-->
+    <property name="address">
+      <value>
+        <![CDATA[<<湖南>>]]>
+      </value>
+    </property>
   </bean>
 </beans>
