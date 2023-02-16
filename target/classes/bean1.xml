@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
   <!--1.配置user对象 有参构造注入属性-->
-  <bean id="user" class="org.example.model.User">
+  <bean id="user" class="org.example.model.User" scope="singleton">
     <constructor-arg name="name" value="周李鑫"></constructor-arg>
     <constructor-arg name="age" value="18"></constructor-arg>
   </bean>
