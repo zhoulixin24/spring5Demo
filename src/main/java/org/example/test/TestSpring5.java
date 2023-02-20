@@ -1,6 +1,7 @@
 package org.example.test;
 
 
+import org.example.autowiter.Emp;
 import org.example.factorybean.Mybean;
 import org.example.model.Book;
 import org.example.model.User;
@@ -32,5 +33,14 @@ public class TestSpring5 {
         mybean.way();
         //需要手动调用方法销毁bean
         ((ClassPathXmlApplicationContext)context).close();
+    }
+
+    @Test
+    public void testAutowire() {
+        //1.加载xml文件
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean5.xml");
+        //2.获取配置创建对象
+        Emp emp = context.getBean("emp",Emp.class);
+        emp.test();
     }
 }
