@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="mybean" class="org.example.factorybean.Mybean" init-method="initMethod" destroy-method="destoryMethod">
+    <property name="name" value="阿甩甩"></property>
+</bean>
+
+    <!--配置后置处理器 添加完之后 所有的Bean都会有这个后置处理器-->
+    <bean id="myBeanPost" class="org.example.MyBeanPost"></bean>
+</beans>
